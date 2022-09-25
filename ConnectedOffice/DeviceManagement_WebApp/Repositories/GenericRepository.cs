@@ -16,10 +16,17 @@ namespace DeviceManagement_WebApp.Repositories
         public void Add(T entity)
         {
             _context.Set<T>().Add(entity);
+            _context.SaveChanges();
+        }
+        public void Update(T entity)
+        {
+            _context.Set<T>().Update(entity);
+            _context.SaveChanges();
         }
         public void AddRange(IEnumerable<T> entities)
         {
             _context.Set<T>().AddRange(entities);
+            _context.SaveChanges();
         }
         public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
         {
@@ -29,19 +36,21 @@ namespace DeviceManagement_WebApp.Repositories
         {
             return _context.Set<T>().ToList();
         }
-        public T GetById(int id)
+        public T GetById(Guid? id)
         {
             return _context.Set<T>().Find(id);
         }
         public void Remove(T entity)
         {
             _context.Set<T>().Remove(entity);
+            _context.SaveChanges();
         }
         public void RemoveRange(IEnumerable<T> entities)
         {
             _context.Set<T>().RemoveRange(entities);
+            _context.SaveChanges();
         }
     }
 }
 
-}
+
