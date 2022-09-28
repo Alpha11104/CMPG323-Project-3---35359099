@@ -13,39 +13,39 @@ namespace DeviceManagement_WebApp.Repositories
         {
             _context = context;
         }
-        public void Add(T entity)
+        public virtual void Add(T entity)
         {
             _context.Set<T>().Add(entity);
             _context.SaveChanges();
         }
-        public void Update(T entity)
+        public virtual void Update(T entity)
         {
             _context.Set<T>().Update(entity);
             _context.SaveChanges();
         }
-        public void AddRange(IEnumerable<T> entities)
+        public virtual void AddRange(IEnumerable<T> entities)
         {
             _context.Set<T>().AddRange(entities);
             _context.SaveChanges();
         }
-        public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
+        public virtual IEnumerable<T> Find(Expression<Func<T, bool>> expression)
         {
             return _context.Set<T>().Where(expression);
         }
-        public IEnumerable<T> GetAll()
+        public virtual IEnumerable<T> GetAll()
         {
             return _context.Set<T>().ToList();
         }
-        public T GetById(Guid? id)
+        public virtual T GetById(Guid? id)
         {
             return _context.Set<T>().Find(id);
         }
-        public void Remove(T entity)
+        public virtual void Remove(T entity)
         {
             _context.Set<T>().Remove(entity);
             _context.SaveChanges();
         }
-        public void RemoveRange(IEnumerable<T> entities)
+        public virtual void RemoveRange(IEnumerable<T> entities)
         {
             _context.Set<T>().RemoveRange(entities);
             _context.SaveChanges();

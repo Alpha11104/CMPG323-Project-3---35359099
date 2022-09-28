@@ -15,7 +15,7 @@ namespace DeviceManagement_WebApp.Repositories
             _context = context;
         }
 
-        public new IEnumerable<Device> GetAll()
+        public override IEnumerable<Device> GetAll()
         {
             var devices = _context.Device
                 .Include(d => d.Category)
@@ -24,7 +24,7 @@ namespace DeviceManagement_WebApp.Repositories
 
             return devices;
         }
-        public new Device GetById(Guid? id)
+        public override Device GetById(Guid? id)
         {
             return _context.Device
                 .Include(d => d.Category)
