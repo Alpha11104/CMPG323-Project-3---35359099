@@ -305,3 +305,21 @@ The following dependencies are added in the startup class in order to instatiate
     services.AddTransient<IZoneRepository, ZoneRepository>();
     services.AddTransient<IDeviceRepository, DeviceRepository>();
 ```
+
+### Reference List
+- Microsoft Learn, 2022. Build web apps with ASP.NET Core for beginners. [Online] 
+Available at: https://learn.microsoft.com/en-us/training/paths/aspnet-core-web-app/
+[Accessed 18 09 2022].
+- Mondal & Soumik, 2022. C# | Method Overriding. [Online] 
+Available at: https://www.geeksforgeeks.org/c-sharp-method-overriding/
+[Accessed 20 09 2022].
+- Mortazavi & Siavash, 2019. Hides inherited member warning. [Online] 
+Available at: https://stackoverflow.com/questions/53602702/hides-inherited-member-warning
+[Accessed 19 09 2022].
+- Naik & Kanchan, 2021. Design Patterns In C# .NET. [Online] 
+Available at: https://www.c-sharpcorner.com/UploadFile/bd5be5/design-patterns-in-net/
+[Accessed 15 09 2022].
+- Velayutham & Manikavelu, 2012. Manikavelu. [Online] 
+Available at: https://www.c-sharpcorner.com/uploadfile/babu_2082/architectural-patterns-in-net/
+[Accessed 15 09 2022].
+
